@@ -1,0 +1,52 @@
+@import "tachyons";
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.cursor-help {
+  cursor: help;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+.cursor-point {
+  cursor: pointer;
+}
+
+.cursor-copy {
+  cursor: copy;
+}
+
+.pop-hover:hover {
+  box-shadow: 1px 2px 10px #444;
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.h-90vh {
+  height: 90vh;
+}
+
+a {
+  color: inherit;
+}
+
+.pad-right-1rem {
+  padding-right: 1rem;
+}
+
+title {
+  color: black;
+  background-color: white;
+  font-size: 40px;
+}
