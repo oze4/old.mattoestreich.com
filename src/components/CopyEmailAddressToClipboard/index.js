@@ -10,7 +10,7 @@ CopyEmailAddressToClipboard.propTypes = {
 
 export default function CopyEmailAddressToClipboard({ emailAddress, onCopied }) {
     const [statusText, setStatusText] = useState("click to copy");
-    const [,setClipboard] = useClipboard();
+    const setClipboard = useClipboard();
 
     useEffect(() => {
         let _to = setTimeout(() => { onCopied(); }, 10000);

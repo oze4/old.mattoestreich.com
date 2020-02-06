@@ -16,5 +16,6 @@ export default function useClipboard(text) {
     };
 
     setClipboard(text);
-    return [clip, setClipboard];
+
+    return setClipboard;
 }

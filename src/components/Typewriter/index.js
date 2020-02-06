@@ -33,13 +33,12 @@ export default function TypeWriter({ element, messages, pauseBeforeDelete, typin
     const heading = messages[i].heading;
 
     const handleTyping = () => {
-        setText(
-            isDeleting
-                ? fullText.substring(0, text.length - 1)
-                : fullText.substring(0, text.length + 1)
-        );
+        let opts = isDeleting 
+            ? { length: text.length - 1, speed: deletionSpeed } 
+            : { length: text.length + 1, speed: typingSpeed };
 
-        setSpeed(isDeleting ? deletionSpeed : typingSpeed);
+        setText(fullText.substring(0, opts.length));
+        setSpeed(opts.speed);
 
         if (!isDeleting && text === fullText) {
             setTimeout(() => setIsDeleting(true), pauseBeforeDelete);
@@ -50,9 +49,8 @@ export default function TypeWriter({ element, messages, pauseBeforeDelete, typin
     };
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            handleTyping();
-        }, speed);
+        const timer = setTimeout(() => handleTyping(), speed);
+
         return () => clearTimeout(timer);
     });
 
