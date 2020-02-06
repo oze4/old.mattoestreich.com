@@ -14,7 +14,7 @@ function App() {
 
     return (
         <div>
-            <GithubCorner url="https://github.com/oze4/mattoestreich.com" title="Source code for this website" />
+            <GithubCorner url="https://github.com/oze4/portfolio-mattoestreich" title="Source code for this website" />
             
             <Row center="xs">
                 <Col xs={12}><DateTime now classes="sans-serif mt3" /></Col>
