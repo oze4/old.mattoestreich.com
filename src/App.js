@@ -90,7 +90,7 @@ function App() {
           <Row center="xs" middle="xs" className="mt5">
             <Col xs={10} sm={6} md={4} lg={4} className="f3 f3-ns pad-right-1rem">
               <RopaSansP style={{ margin: '0 0 10px 0', fontSize: "1rem" }}>
-                My expierence includes, but is not limited to: <i><b>{` ${skillLevel && skillLevel.name ? skillLevel.name : ""} `}</b></i>
+                My interests include:<i><b>{` ${skillLevel && skillLevel.name ? skillLevel.name : ""} `}</b></i>
               </RopaSansP>
               {api.iconSkills.map((i) => {
                 let SkillIcon = i.icon;
