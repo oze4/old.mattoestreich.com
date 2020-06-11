@@ -89,7 +89,7 @@ function App() {
 
           <Row center="xs" middle="xs" className="mt5">
             <Col xs={10} sm={6} md={4} lg={4} className="f3 f3-ns pad-right-1rem">
-              <RopaSansP style={{ margin: '0 0 5px 0', fontSize: "1rem", minHeight: '2.2rem' }}>
+              <RopaSansP style={{ margin: '0 0 5px 0', fontSize: "1rem", minHeight: '2.4rem' }}>
                 Some of my interests include: <div>{skillLevel && skillLevel.name ? skillLevel.name : ''}</div>
               </RopaSansP>
               {api.iconSkills.map((i) => {
