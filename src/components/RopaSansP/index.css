@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
+.ropa-sans {
+  font-family: 'Ropa Sans', sans-serif !important;
+}
+
+body > * {
+  font-family: 'Ropa Sans', sans-serif !important;
+}

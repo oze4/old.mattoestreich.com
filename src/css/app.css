@@ -1,5 +1,13 @@
 @import "tachyons";
 
+body > * {
+  font-family: 'Ropa Sans', sans-serif !important;
+}
+
+.sans-serif {
+  font-family: 'Ropa Sans', sans-serif !important;
+}
+
 html {
   height: 100%;
 }

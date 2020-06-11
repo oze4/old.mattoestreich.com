@@ -1,5 +1,3 @@
-import useClipboard from './useClipboard';
+import useClipboard from "./useClipboard";
 
-export {
-    useClipboard,
-}
+export { useClipboard };

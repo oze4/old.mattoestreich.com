@@ -1,13 +1,6 @@
-import Header from './Header';
-import DateTime from './DateTime';
-import Typewriter from './Typewriter';
-import GithubCorner from './GithubCorner';
-import CopyEmailAddressToClipboard from './CopyEmailAddressToClipboard';
-
-export {
-    Header,
-    DateTime,
-    Typewriter,
-    GithubCorner,
-    CopyEmailAddressToClipboard,
-}
+export { default as Header } from "./Header";
+export { default as DateTime } from "./DateTime";
+export { default as TypeWriter } from "./Typewriter";
+export { default as GithubCorner } from "./GithubCorner";
+export { default as CopyEmailAddressToClipboard } from "./CopyEmailAddressToClipboard";
+export { default as RopaSansP } from "./RopaSansP";
