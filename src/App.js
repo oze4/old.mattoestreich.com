@@ -89,13 +89,14 @@ function App() {
 
           <Row center="xs" middle="xs" className="mt5">
             <Col xs={10} sm={6} md={4} lg={4} className="f3 f3-ns pad-right-1rem">
-              <RopaSansP style={{ margin: '0 0 10px 0', fontSize: "1rem" }}>
-                My interests include{skillLevel && skillLevel.name ? <React.Fragment>: <i><b>{skillLevel.name}</b></i></React.Fragment> : ""}
+              <RopaSansP style={{ margin: '0 0 5px 0', fontSize: "1rem", minHeight: '2.2rem' }}>
+                Some of my interests include: <div>{skillLevel && skillLevel.name ? skillLevel.name : ''}</div>
               </RopaSansP>
               {api.iconSkills.map((i) => {
                 let SkillIcon = i.icon;
                 return (
                   <SkillIcon
+                    title={i.title}
                     onClick={() => handleHoverIcon(i.title, i.skill)}
                     onMouseOver={() => handleHoverIcon(i.title, i.skill)}
                     onMouseLeave={() => handleHoverIcon(null, null)}
