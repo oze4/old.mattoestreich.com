@@ -1,21 +1,23 @@
 const fs = require("fs");
-const chalk = require("chalk");
+const chalky = require("chalky");
 
 const oldPath = "./build";
 const newPath = "./docs";
 const cnamePath = `${newPath}/CNAME`;
 const cnameContents = "mattoestreich.com";
 
-console.log(chalk.magenta("*".repeat(50)));
+console.log(chalky.magenta("*".repeat(50)));
 
 fs.exists(newPath, (exists) => {
   if (exists) {
     try {
       fs.rmdirSync(newPath, { recursive: true });
       exists = false;
-      console.log(chalk.green(`\r\nSuccessfully removed directory: ${chalk.yellow(newPath)}\r\n`));
+      console.log(
+        chalky.green(`\r\nSuccessfully removed directory: ${chalky.yellow(newPath)}\r\n`),
+      );
     } catch (err) {
-      throw Error(chalk.red(`\r\nUnable to remove directory: ${chalk.yellow(newPath)}!\r\n`));
+      throw Error(chalky.red(`\r\nUnable to remove directory: ${chalky.yellow(newPath)}!\r\n`));
     }
   }
 
@@ -23,8 +25,8 @@ fs.exists(newPath, (exists) => {
     fs.rename(oldPath, newPath, (err) => {
       if (err) {
         throw Error(
-          chalk.red(
-            `Unable to rename '${chalk.yellow(oldPath)}' to '${chalk.yellow(newPath)}'.\r\n\r\n${
+          chalky.red(
+            `Unable to rename '${chalky.yellow(oldPath)}' to '${chalky.yellow(newPath)}'.\r\n\r\n${
               err.message
             }\r\n\r\n`,
           ),
@@ -32,17 +34,19 @@ fs.exists(newPath, (exists) => {
       }
 
       console.log(
-        chalk.green(
-          `\r\nSuccessfully renamed '${chalk.yellow(oldPath)}' to '${chalk.yellow(newPath)}'!\r\n`,
-        ),
+        chalky.green("\r\nSuccessfully renamed "),
+        chalky.yellow(oldPath),
+        chalky.green(" to "),
+        chalky.yellow(newPath),
+        chalky.green("!\r\n"),
       );
 
       fs.writeFile(cnamePath, cnameContents, (err) => {
         if (err) {
-          throw Error(chalk.red("\r\n\r\nUnable to create CNAME file!\r\n\r\n"));
+          throw Error(chalky.red("\r\n\r\nUnable to create CNAME file!\r\n\r\n"));
         }
 
-        console.log(chalk.green("\r\nSuccessfully created CNAME file!\r\n"));
+        console.log(chalky.green("\r\nSuccessfully created CNAME file!\r\n"));
       });
     });
   }

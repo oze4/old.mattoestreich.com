@@ -83,7 +83,7 @@ export default {
     { icon: DiJqueryLogo, title: "jQuery", skill: 86 },
     { icon: DiReact, title: "React.js", skill: 84 },
     { icon: FaVuejs, title: "Vue.js", skill: 80 },
-    { icon: DiNodejsSmall, title: "Node.js", skill: 82 },
+    { icon: DiNodejsSmall, title: "Node", skill: 82 },
     { icon: DiGo, title: "Go", skill: 33 },
     { icon: DiMongodb, title: "MongoDB", skill: 77 },
     { icon: DiGulp, title: "Gulp", skill: 27 },
